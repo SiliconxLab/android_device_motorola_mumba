@@ -65,6 +65,17 @@ on fs && property:ro.boot.product.vendor.sku=cape
     wait /dev/block/bootdevice/by-name/spunvm
     mount vfat /dev/block/bootdevice/by-name/spunvm /mnt/vendor/spunvm rw noatime shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0
 
+    mkdir /dev/cpuset/surfaceflinger
+    write /dev/cpuset/surfaceflinger/cpus 4-7
+    write /dev/cpuset/surfaceflinger/mems 0
+    chown system system /dev/cpuset/surfaceflinger
+    chown system system /dev/cpuset/surfaceflinger/tasks
+    chown system system /dev/cpuset/surfaceflinger/cgroup.procs
+    # Set surfaceflinger to 0775 so SurfaceFlinger can touch it
+    chmod 0775 /dev/cpuset/surfaceflinger
+    chmod 0664 /dev/cpuset/surfaceflinger/tasks
+    chmod 0664 /dev/cpuset/surfaceflinger/cgroup.procs
+
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
