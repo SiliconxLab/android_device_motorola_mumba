@@ -66,6 +66,10 @@ vendor/lib64/libpal_net_if.so
 vendor/lib64/libqtigefar.so;DISABLE_DEPS
 vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
 
+# Viper
+product/priv-app/ViPER4Android/ViPER4Android.apk|2de144943c0090a25be4da321375dd1ddb60ae1b
+vendor/lib64/soundfx/libv4a_aidl.so|cfc9c2364452c6bf5a95819b457aa75ac0280bf2
+
 # Audio configs
 vendor/etc/audio_effects.xml
 vendor/etc/audio_ext_spkr.conf

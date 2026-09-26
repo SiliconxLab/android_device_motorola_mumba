@@ -31,10 +31,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# ViPER4Android
-PRODUCT_PACKAGES += \
-    ViPER4Android
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -49,7 +45,6 @@ PRODUCT_PACKAGES += \
     libaudiochargerlistener \
     libbatterylistener \
     libfmpal \
-    libv4a_aidl \
     libhfp_pal \
     libmediautils_vendor.vendor \
     libmemunreachable.vendor \
