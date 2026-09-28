@@ -55,3 +55,5 @@ ro.wifi.channels=
 # Device
 ro.product.marketname=Motorola G57 Power
 ro.product.mod_device=mumba
+ro.infinity.soc=Snapdragon 6 Gen 4
+ro.infinity.camera=50MP + 8MP + 2MP
